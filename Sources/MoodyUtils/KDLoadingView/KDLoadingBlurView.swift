@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class KDLoadingBlurView: UIView {
+public final class KDLoadingBlurView: UIView {
     private let effectView: UIVisualEffectView
     public var loadingView : KDLoadingView?
     
