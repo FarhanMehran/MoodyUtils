@@ -23,11 +23,11 @@ public final class KDLoadingBlurView: UIView {
         fatalError()
     }
     
-    override func addSubview(_ view: UIView) {
+    override public func addSubview(_ view: UIView) {
         effectView.contentView.addSubview(view)
     }
     
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         
         effectView.frame = bounds
