@@ -5,20 +5,21 @@ import PackageDescription
 
 let package = Package(
     name: "MoodyUtils",
+    platforms: [.iOS(.v13)],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "MoodyUtils",
             targets: ["MoodyUtils"]),
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "MoodyUtils"),
+            name: "MoodyUtils",
+            path: "Sources/MoodyUtils"
+        ),
         .testTarget(
             name: "MoodyUtilsTests",
-            dependencies: ["MoodyUtils"]
+            dependencies: ["MoodyUtils"],
+            path: "Tests/MoodyUtilsTests"
         ),
     ]
 )
